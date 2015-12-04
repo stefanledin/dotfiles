@@ -1,0 +1,4 @@
+[
+	{ "keys": ["super+enter"], "command": "toggle_full_screen" }
+]
+
