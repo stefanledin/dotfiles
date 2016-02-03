@@ -4,11 +4,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'othree/html5.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
-Plugin 'vim-ariline/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
