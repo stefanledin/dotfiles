@@ -4,12 +4,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'othree/html5.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
+Plugin 'vim-ariline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -35,13 +34,18 @@ set autoindent
 set smartindent
 set shiftwidth=4
 set expandtab
-set guifont=Ubuntu_Mono_derivative_Powerline:h15
-set linespace=5
+set guifont=Ubuntu_Mono_derivative_Powerline:h14
+"set guifont=Roboto_Mono_for_Powerline:h14
+set linespace=1
 set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 set guioptions-=e
+
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Shift+tab
 nnoremap <S-Tab> <<
