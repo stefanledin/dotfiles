@@ -4,7 +4,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'othree/html5.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
@@ -12,13 +11,26 @@ Plugin 'vim-ariline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'jiangmiao/auto-pairs'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " requirediletype plugin on
 
 let mapleader = ','
+
+" Autocomplete
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " UI
 syntax enable
@@ -52,14 +64,14 @@ nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
 
 " Search
-set hlsearch                "Highlight all matched terms.
-set incsearch               "Incrementally highlight, as we type.
+set hlsearch								"Highlight all matched terms.
+set incsearch								"Incrementally highlight, as we type.
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
 
 " Splits
-set splitbelow                "Make splits default to below...
-set splitright                "And to the right. This feels more natural.
+set splitbelow 								"Make splits default to below...
+set splitright								"And to the right. This feels more natural.
 "We'll set simpler mappings to switch between splits.
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
@@ -72,6 +84,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|node_modules|svn)$',
-  \ }
+	\ 'dir':  '\v[\/]\.(git|node_modules|svn)$',
+	\ }
+
 
