@@ -4,24 +4,34 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'kien/ctrlp.vim'
+" ====== UI ====== "
+Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-ariline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'terryma/vim-multiple-cursors'
+Bundle 'captbaritone/better-indent-support-for-php-with-html'
+
+" ====== SYNTAX ====== "
+Plugin 'StanAngeloff/php.vim'
+
+" ====== AUTOCOMPLETE & SNIPPETS ====== "
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " requirediletype plugin on
+call vundle#end()
+filetype on
+filetype plugin on
+filetype indent on
+filetype plugin indent on    
 
 let mapleader = ','
 
-" Autocomplete
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -47,7 +57,6 @@ set smartindent
 set shiftwidth=4
 set expandtab
 set guifont=Ubuntu_Mono_derivative_Powerline:h14
-"set guifont=Roboto_Mono_for_Powerline:h14
 set linespace=1
 set guioptions-=r
 set guioptions-=R
