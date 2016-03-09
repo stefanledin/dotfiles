@@ -6,8 +6,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " ====== UI ====== "
 Plugin 'flazz/vim-colorschemes'
-Plugin 'vim-ariline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-ariline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -22,6 +22,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
+Plugin 'vim-scripts/closetag.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -56,8 +57,8 @@ set autoindent
 set smartindent
 set shiftwidth=4
 set expandtab
-set guifont=Ubuntu_Mono_derivative_Powerline:h14
-set linespace=1
+set guifont=Ubuntu_Mono_derivative_Powerline:h15
+set linespace=5
 set guioptions-=r
 set guioptions-=R
 set guioptions-=l
@@ -67,6 +68,7 @@ set guioptions-=e
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 
 " Shift+tab
 nnoremap <S-Tab> <<
