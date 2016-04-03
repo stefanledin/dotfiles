@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 "Plugin 'vim-ariline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -16,7 +17,8 @@ Bundle 'captbaritone/better-indent-support-for-php-with-html'
 
 " ====== SYNTAX ====== "
 Plugin 'StanAngeloff/php.vim'
-Plugin 'qbbr/vim-twig'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'evidens/vim-twig'
 
 " ====== AUTOCOMPLETE & SNIPPETS ====== "
 Plugin 'Valloric/YouCompleteMe'
@@ -51,6 +53,7 @@ colorscheme solarized
 set backspace=indent,eol,start  
 set laststatus=2
 set background=dark
+set t_Co=256
 set relativenumber
 set number
 set mouse=a
@@ -96,9 +99,7 @@ map <D-1> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Ctrlp
-let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/]\.(git|node_modules|svn)$',
-	\ }
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " delimitMate 
 let delimitMate_expand_cr = 1
