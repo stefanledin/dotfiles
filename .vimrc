@@ -16,6 +16,7 @@ Bundle 'captbaritone/better-indent-support-for-php-with-html'
 
 " ====== SYNTAX ====== "
 Plugin 'StanAngeloff/php.vim'
+Plugin 'qbbr/vim-twig'
 
 " ====== AUTOCOMPLETE & SNIPPETS ====== "
 Plugin 'Valloric/YouCompleteMe'
@@ -23,6 +24,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/closetag.vim'
+Plugin 'raimondi/delimitmate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -57,7 +59,7 @@ set autoindent
 set smartindent
 set shiftwidth=4
 set expandtab
-set guifont=Ubuntu_Mono_derivative_Powerline:h15
+set guifont=Menlo:h15
 set linespace=5
 set guioptions-=r
 set guioptions-=R
@@ -97,5 +99,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:ctrlp_custom_ignore = {
 	\ 'dir':  '\v[\/]\.(git|node_modules|svn)$',
 	\ }
+
+" delimitMate 
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
 
 
